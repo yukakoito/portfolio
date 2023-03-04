@@ -1,3 +1,4 @@
+import About from "./components/About";
 import GlobalStyles from "./GlobalStyles";
 
 
@@ -5,7 +6,7 @@ const App = () => {
   return (
     <div>
       <GlobalStyles/>
-      Hello World
+      <About/>
     </div>
   );
 }
