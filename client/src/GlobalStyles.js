@@ -42,4 +42,8 @@ export default createGlobalStyle`
   h1 {
     font-size: 22px;
   }
+
+  h2 {
+    font-size: 18px;
+  }
 `;

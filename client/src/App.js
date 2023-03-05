@@ -1,6 +1,7 @@
+import GlobalStyles from "./GlobalStyles";
 import About from "./components/About";
 import Skills from "./components/skills/Skills";
-import GlobalStyles from "./GlobalStyles";
+import Projects from "./components/projects/Projects";
 
 const App = () => {
   return (
@@ -8,6 +9,7 @@ const App = () => {
       <GlobalStyles/>
       <About/>
       <Skills/>
+      <Projects/>
     </div>
   );
 }

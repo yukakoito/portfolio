@@ -1,6 +1,6 @@
-export const skillset = [
-  'Javascript',
-  'TypeScript',
+export const skillData = [
+  'JavaScript',
+  'Typescript',
   'HTML',
   'CSS',
   'React',
