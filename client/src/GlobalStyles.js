@@ -2,9 +2,9 @@ import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   :root {
-    --primary-color: #1d3557;
+    --primary-color: #1a535c;
+    --secondary-color: #f7fff7;
     --primary-font-family: 'Poppins', sans-serif;
-    --max-content-width: 1200px;
   }
 
   html, body, div, span, applet, object, iframe,
@@ -37,6 +37,8 @@ export default createGlobalStyle`
   body {
     line-height: 1;
     font-family: var(--primary-font-family);
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
   }
 
   h1 {
@@ -45,5 +47,21 @@ export default createGlobalStyle`
 
   h2 {
     font-size: 18px;
+  }
+
+  button {
+    font-family: var(--primary-font-family);
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 5px 10px;
+    margin: 10px;
+    border-radius: 25px 0;
+    border: none;
+    outline: none;
+    &:hover {
+      cursor: pointer;
+      transform: scale(120%);
+      transition: 300ms ease-in-out;
+    }
   }
 `;

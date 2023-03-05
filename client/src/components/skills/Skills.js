@@ -5,7 +5,7 @@ const Skills = () => {
     <div>
       <h1>Skills</h1>
     <ul>
-      {skillData.map(skill => <li>{skill}</li>)}
+      {skillData.map(skill => <li key={skill}>{skill}</li>)}
     </ul>
     </div>
   )

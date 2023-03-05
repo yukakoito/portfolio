@@ -1,7 +1,7 @@
 const About = () => {
   return(
     <div>
-      <h1>About</h1>
+      <h1>About Me</h1>
       <p>
         Hello 👋 My name is Yukako Ito and I am a full-stack web developer located in Montreal.
         Passionate about improving productivity and finding creative solutions to problems.

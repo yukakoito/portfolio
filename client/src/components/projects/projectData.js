@@ -11,6 +11,6 @@ export const projectData = [
     description: '',
     stack: ['Typescript', 'React'],
     url:'',
-    githubUrl: 'https://github.com/yukakoito/weather_app_with_typescript',
+    githubUrl: 'https://github.com/yukakoito/weather_app',
   },
 ];
