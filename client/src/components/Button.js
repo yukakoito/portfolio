@@ -4,7 +4,7 @@ const Button = ({children, url}) => {
   } 
 
   return(
-    <button onClick={() => openInNewTab(url)}>
+    <button onClick={() => url? openInNewTab(url) : null}>
       {children}
     </button>
   )

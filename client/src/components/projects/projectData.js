@@ -1,3 +1,6 @@
+import ZeroWasteCookingImg from '../../assets/ZeroWasteCooking.png';
+import WeatherAppImg from '../../assets/Weather_app.png';
+
 export const projectData = [
   { id: 1,
     title: 'ZeroWasteCooking',
@@ -5,6 +8,7 @@ export const projectData = [
     stack: ['JavaScript', 'React', 'Node.js', 'Express', 'MongoDB'],
     url:'',
     githubUrl: 'https://github.com/yukakoito/CB-Final-Project',
+    image: ZeroWasteCookingImg,
   },
   { id: 2,
     title: 'Weather app',
@@ -12,5 +16,6 @@ export const projectData = [
     stack: ['Typescript', 'React'],
     url:'',
     githubUrl: 'https://github.com/yukakoito/weather_app',
+    image: WeatherAppImg,
   },
 ];

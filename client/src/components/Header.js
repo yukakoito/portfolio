@@ -5,18 +5,20 @@ import styled from 'styled-components';
 import Button from './Button';
 
 const Header = () => {
+
+  const fontSize = 35;
  
   return(
     <Wrapper>
       <IconContainer>
         <Button url={'https://www.linkedin.com/in/itoyukako'}>
-          <LinkedInIcon />
+          <LinkedInIcon sx={{ fontSize: fontSize }}/>
         </Button>
         <Button url={'https://github.com/yukakoito'}>
-          <GitHubIcon/>
+          <GitHubIcon sx={{ fontSize: fontSize }}/>
         </Button>
         <Button>
-          <ContactMailIcon/>
+          <ContactMailIcon sx={{ fontSize: fontSize }}/>
         </Button>
       </IconContainer>
     </Wrapper>
@@ -36,8 +38,12 @@ const Wrapper = styled.div`
 `
 
 const IconContainer = styled.div`
-  width: 100px;
   margin-right: 10vw;
   display: flex;
   justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    margin: 0;
+  }
 `

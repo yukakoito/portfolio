@@ -4,37 +4,99 @@ import LaunchIcon from '@mui/icons-material/Launch';
 import styled from "styled-components";
 
 const ProjectDetails = ({project}) => {
+  const {title, imageUrl, id, url, githubUrl} = project;
+  const fontSize = 16;
 
   return(
-    <div>
-      <h2>{project.title}</h2>
-      <p>{project.description}</p>
-      <ul>
-        {project.stack.map(item => <li key={project.id+"-"+item}>{item}</li>)}
-      </ul>
-      <Button url={project.url}>
-        <ButtonContainer>
-          <LaunchIcon/>
-          <span>Visit the website</span>
-        </ButtonContainer>
-      </Button>
-      <Button url={project.githubUrl}>
-        <ButtonContainer>
-          <GitHubIcon/>
-          <span>View GitHub Repo</span>
-        </ButtonContainer>
-      </Button>
-    </div>
+    <Wrapper>
+      <div>
+        <Thumbnail src={imageUrl} alt={title} />
+        <ProjectBody>
+          <h2>{title}</h2>
+          <ul>
+            {project.stack.map(item => <li key={id+"-"+item}>{item}</li>)}
+          </ul>
+        </ProjectBody>
+      </div>
+      <ButtonContainer>
+        <Button url={url}>
+            <LaunchIcon sx={{ fontSize: fontSize }}/>
+            <span>Visit the website</span>
+        </Button>
+        <Button url={githubUrl}>
+            <GitHubIcon sx={{ fontSize: fontSize }}/>
+            <span>View GitHub Repo</span>
+        </Button>
+      </ButtonContainer>
+    </Wrapper>
   )
 }
 
 export default ProjectDetails;
 
+const Wrapper = styled.div`
+  height: 300px;
+  width: 250px;
+  margin: 5px 15px;
+  position: relative;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+`
+
+const Thumbnail = styled.img`
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+`
+
+const ProjectBody = styled.div`
+  width: 100%;
+  height: 38%;
+  position: absolute;
+  z-index: 1;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  ul {
+    margin-left: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+
+  li {
+    list-style: none;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 2px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  }
+`
+
 const ButtonContainer = styled.div`
+  height: 100%;
+  width: 100%;
   display: flex;
   align-items: center;
-  
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  opacity: 0;
   span {
     margin-left: 0.5em;
+  }
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(255,255,255, 0.5);
+    transition: all 1s ease-in-out;
   }
 `

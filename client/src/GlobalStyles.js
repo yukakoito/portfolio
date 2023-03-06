@@ -43,10 +43,13 @@ export default createGlobalStyle`
 
   h1 {
     font-size: 22px;
+    margin: 1em 0;
+    border-bottom: 1px solid var(--primary-color);
   }
 
   h2 {
     font-size: 18px;
+    margin: 0.5em 0;
   }
 
   button {
@@ -60,8 +63,17 @@ export default createGlobalStyle`
     outline: none;
     &:hover {
       cursor: pointer;
-      transform: scale(120%);
-      transition: 300ms ease-in-out;
+      transform: scale(1.1);
+      transition: 0.5s ease-in-out;
     }
+  }
+
+  ul {
+    margin: 0.5em 0 0.5em 2em;
+  }
+
+  img {
+    height: 250px;
+    width: 250px;
   }
 `;
