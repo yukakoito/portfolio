@@ -4,18 +4,35 @@ import styled from "styled-components";
 
 const Projects = () => {
   return(
-    <div>
+    <Wrapper>
       <h1>Projects</h1>
       <ProjectContainer>
         {projectData.map(project => <ProjectDetails key={project.id} project={project}/>)}
       </ProjectContainer>
-    </div>
+    </Wrapper>
   )
 }
 
 export default Projects;
 
-const ProjectContainer = styled.div`
-  width: 100%;
+const Wrapper = styled.div`
   display: flex;
+  flex-flow: column;
+`
+
+const ProjectContainer = styled.div`
+  width: 70%;
+  align-self: center;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-gap: 15px;
+
+  @media screen and (min-width: 600px){
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and (min-width: 900px){
+    grid-template-columns: repeat(3, 1fr);
+  }
 `

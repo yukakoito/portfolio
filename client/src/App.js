@@ -25,4 +25,5 @@ export default App;
 
 const BodyWrapper = styled.div`
   margin: 35px 10vw;
+  min-height: calc(100vh - 170px);
 `

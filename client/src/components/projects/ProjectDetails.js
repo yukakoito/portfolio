@@ -5,7 +5,7 @@ import styled from "styled-components";
 
 const ProjectDetails = ({project}) => {
   const {title, imageUrl, id, url, githubUrl} = project;
-  const fontSize = 16;
+  const fontSize = 18;
 
   return(
     <Wrapper>
@@ -19,10 +19,13 @@ const ProjectDetails = ({project}) => {
         </ProjectBody>
       </div>
       <ButtonContainer>
-        <Button url={url}>
-            <LaunchIcon sx={{ fontSize: fontSize }}/>
-            <span>Visit the website</span>
-        </Button>
+        {url? 
+          <Button url={url}>
+              <LaunchIcon sx={{ fontSize: fontSize }}/>
+              <span>Visit the website</span>
+          </Button> 
+          : null
+        }
         <Button url={githubUrl}>
             <GitHubIcon sx={{ fontSize: fontSize }}/>
             <span>View GitHub Repo</span>
@@ -35,9 +38,8 @@ const ProjectDetails = ({project}) => {
 export default ProjectDetails;
 
 const Wrapper = styled.div`
-  height: 300px;
-  width: 250px;
-  margin: 5px 15px;
+  height: 350px;
+  width: 100%;
   position: relative;
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
@@ -45,7 +47,7 @@ const Wrapper = styled.div`
 
 const Thumbnail = styled.img`
   width: 100%;
-  height: 60%;
+  height: 55%;
   position: absolute;
   top: 0;
   left: 0;
@@ -55,7 +57,7 @@ const Thumbnail = styled.img`
 
 const ProjectBody = styled.div`
   width: 100%;
-  height: 38%;
+  height: 43%;
   position: absolute;
   z-index: 1;
   bottom: 0;
@@ -69,6 +71,7 @@ const ProjectBody = styled.div`
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    width: 90%;
   }
 
   li {
@@ -84,19 +87,23 @@ const ButtonContainer = styled.div`
   height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
   z-index: 100;
   top: 0;
   left: 0;
   opacity: 0;
+
   span {
     margin-left: 0.5em;
+    font-size: medium;
   }
 
   &:hover {
     opacity: 1;
-    background-color: rgba(255,255,255, 0.5);
+    background-color: rgba(255,255,255, 0.7);
     transition: all 1s ease-in-out;
   }
 `

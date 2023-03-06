@@ -3,7 +3,7 @@ import styled from "styled-components";
 const Footer = () => {
   return(
     <Wrapper>
-      ©️ Copyright 2023 Yi
+      ©️ Copyright 2023 Yukako Ito
     </Wrapper>
   )
 }

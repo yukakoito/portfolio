@@ -10,6 +10,11 @@ const Header = () => {
  
   return(
     <Wrapper>
+      <HeaderBody>
+        <span>Yukako Ito</span>
+        <span className='separator'> | </span>
+        <span className='title'>Web Developer</span>
+      </HeaderBody>
       <IconContainer>
         <Button url={'https://www.linkedin.com/in/itoyukako'}>
           <LinkedInIcon sx={{ fontSize: fontSize }}/>
@@ -34,16 +39,40 @@ const Wrapper = styled.div`
   color: var(--secondary-color);
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
+`
+
+const HeaderBody = styled.div`
+  margin-left: 10vw;
+  font-size: large;
+
+  @media screen and (max-width: 600px){
+    display: flex;
+    flex-flow: column wrap;
+
+    .separator {
+      display: none;
+    }
+    
+    .title {
+      font-size: small;
+    }
+  }
 `
 
 const IconContainer = styled.div`
   margin-right: 10vw;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
 
   button {
     background-color: transparent;
     margin: 0;
+  }
+
+  @media screen and (max-width: 600px){ 
+    button {
+      padding: 3px;
+    }
   }
 `

@@ -61,6 +61,9 @@ export default createGlobalStyle`
     border-radius: 25px 0;
     border: none;
     outline: none;
+    display: flex;
+    align-items: center;
+    
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
@@ -70,6 +73,11 @@ export default createGlobalStyle`
 
   ul {
     margin: 0.5em 0 0.5em 2em;
+  }
+
+  li {
+    padding: 2px;
+    list-style-type: '✽ ';
   }
 
   img {
