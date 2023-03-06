@@ -3,10 +3,16 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
 import styled from 'styled-components';
 import Button from './Button';
+import Contact from './contact/Contact';
+import { useState } from 'react';
 
 const Header = () => {
-
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const fontSize = 35;
+
+  const handleModal = () => {
+    setIsModalOpen(!isModalOpen);
+  }
  
   return(
     <Wrapper>
@@ -22,10 +28,11 @@ const Header = () => {
         <Button url={'https://github.com/yukakoito'}>
           <GitHubIcon sx={{ fontSize: fontSize }}/>
         </Button>
-        <Button>
+        <Button onClickFunc={handleModal}>
           <ContactMailIcon sx={{ fontSize: fontSize }}/>
         </Button>
       </IconContainer>
+      <Contact onClickFunc={handleModal} isModalOpen={isModalOpen}/>
     </Wrapper>
   )
 }

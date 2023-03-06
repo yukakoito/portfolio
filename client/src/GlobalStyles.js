@@ -58,12 +58,13 @@ export default createGlobalStyle`
     color: var(--secondary-color);
     padding: 5px 10px;
     margin: 10px;
-    border-radius: 25px 0;
     border: none;
     outline: none;
     display: flex;
     align-items: center;
-    
+    width: fit-content;
+    border-radius: 5px;
+
     &:hover {
       cursor: pointer;
       transform: scale(1.1);
@@ -80,8 +81,20 @@ export default createGlobalStyle`
     list-style-type: '✽ ';
   }
 
-  img {
-    height: 250px;
-    width: 250px;
+  form {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
   }
+
+  input {
+    padding: 5px 10px;
+    outline-color: var(--primary-color);
+    margin: 2px 0 5px;
+  }
+  
+  label {
+    font-size: smaller;
+  }
+
 `;

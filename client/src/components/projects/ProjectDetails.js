@@ -101,6 +101,12 @@ const ButtonContainer = styled.div`
     font-size: medium;
   }
 
+  button {
+    width: 200px;
+    justify-content: center;
+    border-radius: 25px 0;
+  }
+
   &:hover {
     opacity: 1;
     background-color: rgba(255,255,255, 0.7);
