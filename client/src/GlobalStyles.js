@@ -87,7 +87,7 @@ export default createGlobalStyle`
     justify-content: center;
   }
 
-  input {
+  input, textarea {
     padding: 5px 10px;
     outline-color: var(--primary-color);
     margin: 2px 0 5px;

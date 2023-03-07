@@ -8,7 +8,7 @@ const Contact = ({onClickFunc, isModalOpen}) => {
     <Dialog open={isModalOpen} fullWidth={true}>
       <Wrapper>
         <button className='closeButton' onClick={() => onClickFunc()}>✕</button>
-        <h1>Contact</h1>
+        <h1>Contact Me</h1>
         <ContactForm />
       </Wrapper>
     </Dialog>
@@ -19,6 +19,7 @@ export default Contact;
 
 const Wrapper = styled.div`
   margin: 10px 25px 0;
+  height: 375px;
 
   button {
     align-self: flex-end;

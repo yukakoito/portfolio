@@ -3,7 +3,7 @@ const About = () => {
     <div>
       <h1>About Me</h1>
       <p>
-        Hello 👋 My name is Yukako Ito and I am a full-stack web developer located in Montreal.
+        Hello 👋 My name is Yukako Ito and I am a web developer located in Montreal.
       </p>
       <p>
         Passionate about improving productivity and finding creative solutions to problems.

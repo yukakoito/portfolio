@@ -1,56 +1,54 @@
-import { useState } from "react";
-
-const defaultInputFields = {
-  name: '',
-  email: '', 
-  message: ''
-};
+import { useForm } from '@formspree/react'
+import styled from 'styled-components'
 
 const ContactForm = () => {
-  const [inputFields, setInputFields] = useState(defaultInputFields);
-  const {displayName, email, message} = inputFields;
+  const [state, handleSubmit] = useForm('xvonrjwp')
 
-  const handleSubmit = async(event) => {
-    event.preventDefault();
-    
-  }
-
-  const handleChange = (event) => {
-    const {name, value} = event.target;
-    setInputFields({...inputFields, [name]: value})
+  if(state.succeeded) {
+    return( 
+      <ConfirmationMsg>
+        <h2>Thank you for your message.</h2>
+        <p>I will get back to you as soon as possible.</p>
+      </ConfirmationMsg>
+    )
   }
 
   return(
       <form onSubmit={handleSubmit}>
-        <label htmlFor='displayName'>Name</label>
+        <label htmlFor='name'>Name:</label>
         <input 
           type='text'
-          name='displayName'
-          value={displayName}
-          onChange={handleChange}
+          name='name'
           required
         />
-        <label htmlFor='email'>Email</label>
+        <label htmlFor='email'>Email:</label>
         <input 
           type='email'
           name='email'
-          value={email}
-          onChange={handleChange}
           required
         />
-        <label htmlFor='message'>Message</label>
+        <label htmlFor='message'>Message:</label>
         <textarea 
-          type='text'
           name='message'
-          value={message}
-          onChange={handleChange}
-          rows='6'
+          rows='7'
           maxLength='2000'
           required
         />
-        <button type='submit'>Send</button>
+        <button type='submit' disabled={state.submitting}>Send</button>
       </form>
   )
 }
 
 export default ContactForm;
+
+const ConfirmationMsg = styled.div`
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  p {
+    font-size: smaller;
+  }
+`
