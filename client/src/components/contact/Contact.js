@@ -25,6 +25,10 @@ const Wrapper = styled.div`
     margin: 10px 0;
     width: 100%;
     justify-content: center;
+
+    &:hover {
+      transform: scale(1);
+    }
   }
   
   .closeButton {
