@@ -22,7 +22,7 @@ export const projectData = [
   { id: 3,
     title: 'My Portfolio',
     description: '',
-    stack: ['JapaScript', 'React'],
+    stack: ['JavaScript', 'React'],
     url: null,
     githubUrl: 'https://github.com/yukakoito/portfolio',
     imageUrl: PortfolioImg,
