@@ -6,8 +6,8 @@ const About = () => {
         Hello 👋 My name is Yukako Ito and I am a web developer located in Montreal.
       </p>
       <p>
-        Passionate about improving productivity and finding creative solutions to problems.
-        Solid team player with ability to adapt and learn quickly to achieve objectives.
+        I am passionate about improving productivity and finding creative solutions to problems.
+        I am a solid team player with the ability to adapt and learn quickly to achieve objectives.
       </p>
     </div>
   )
