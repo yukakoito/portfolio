@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.js": "/portfolio/static/js/main.bae6370e.js",
+    "main.js": "/portfolio/static/js/main.22950a15.js",
     "static/js/787.c4e7f8f9.chunk.js": "/portfolio/static/js/787.c4e7f8f9.chunk.js",
-    "static/media/ZeroWasteCooking.png": "/portfolio/static/media/ZeroWasteCooking.bf31af1e97ea66223f27.png",
     "static/media/Weather_app.png": "/portfolio/static/media/Weather_app.fd266794786b88d64c00.png",
-    "static/media/Portfolio.png": "/portfolio/static/media/Portfolio.cbf361fc740e31b3e69b.png",
+    "static/media/ZeroWasteCooking.png": "/portfolio/static/media/ZeroWasteCooking.e9bb7fd3c2a1918d4938.png",
+    "static/media/Portfolio.png": "/portfolio/static/media/Portfolio.96d932b44428ce1e9ca8.png",
     "index.html": "/portfolio/index.html",
-    "main.bae6370e.js.map": "/portfolio/static/js/main.bae6370e.js.map",
+    "main.22950a15.js.map": "/portfolio/static/js/main.22950a15.js.map",
     "787.c4e7f8f9.chunk.js.map": "/portfolio/static/js/787.c4e7f8f9.chunk.js.map"
   },
   "entrypoints": [
-    "static/js/main.bae6370e.js"
+    "static/js/main.22950a15.js"
   ]
 }
