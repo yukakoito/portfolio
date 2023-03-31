@@ -1,13 +1,14 @@
-import { Dialog } from "@mui/material";
-import styled from "styled-components";
-import ContactForm from "./ContactForm";
+import { Dialog } from '@mui/material'
+import styled from 'styled-components'
+import ContactForm from './ContactForm'
 
-const Contact = ({onClickFunc, isModalOpen}) => {
-
-  return(
+const Contact = ({ onClickFunc, isModalOpen }) => {
+  return (
     <Dialog open={isModalOpen} fullWidth={true}>
       <Wrapper>
-        <button className='closeButton' onClick={() => onClickFunc()}>✕</button>
+        <button className='closeButton' onClick={() => onClickFunc()}>
+          ✕
+        </button>
         <h1>Contact Me</h1>
         <ContactForm />
       </Wrapper>
@@ -15,11 +16,11 @@ const Contact = ({onClickFunc, isModalOpen}) => {
   )
 }
 
-export default Contact;
+export default Contact
 
 const Wrapper = styled.div`
-  margin: 10px 25px 0;
-  height: 375px;
+  margin: 15px 25px;
+  min-height: 350px;
 
   button {
     align-self: flex-end;
@@ -31,7 +32,7 @@ const Wrapper = styled.div`
       transform: scale(1);
     }
   }
-  
+
   .closeButton {
     position: absolute;
     top: 0;

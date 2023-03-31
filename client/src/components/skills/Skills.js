@@ -1,25 +1,28 @@
-import { skillData } from "./skillData";
-import styled from "styled-components";
+import { skillData } from './skillData'
+import styled from 'styled-components'
 
 const Skills = () => {
-  return(
+  return (
     <div>
       <h1>Skills</h1>
-    <SkillWrapper>
-      {skillData.map(skill => <li key={skill}>{skill}</li>)}
-    </SkillWrapper>
+      <SkillWrapper>
+        {skillData.map(skill => (
+          <li key={skill}>{skill}</li>
+        ))}
+      </SkillWrapper>
     </div>
   )
 }
 
-export default Skills;
+export default Skills
 
 const SkillWrapper = styled.ul`
   display: flex;
   flex-flow: row wrap;
-  width: 75%;
+  max-width: 600px;
+  margin-left: 15px;
 
   li {
-    width: 150px;
+    min-width: 150px;
   }
 `
